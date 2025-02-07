@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Taher - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        Mohamed Taher
+    </header>
+    <section class="about reveal">
+        <h2>About Me</h2>
+        <p>I am a student at the Faculty of Artificial Intelligence, specializing in IoT and Machine Learning.</p>
+    </section>
+    <section class="projects reveal">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="1735153641043.jpeg" alt="Gesture Controlled Robot">
+                <h3>Gesture Controlled Robot</h3>
+                <p>A robot that can be controlled using hand gestures.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot 2025-02-07 024153.png" alt="PCB Smart Home Device">
+                <h3>PCB Smart Home Device</h3>
+                <p>A smart home device designed with a custom PCB for automation.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot 2025-02-07 022037.png" alt="IoT Smart Rooms">
+                <h3>IoT Smart Rooms</h3>
+                <p>An IoT-based system for automating and monitoring smart rooms.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot 2025-02-07 020345.png" alt="Smart Home">
+                <h3>Smart Home</h3>
+                <p>A complete smart home solution using IoT technologies.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot-2021-02-11-at-16.52.15-495x400.png" alt="Face Mask Detection">
+                <h3>Face Mask Detection</h3>
+                <p>A machine learning model to detect whether a person is wearing a face mask.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="no-code-computer-vision-mini_cover_No_Code_AI-a673a9d338f4488da167910165f8b96a.jpg" alt="Fresh vs. Rotten Fruits Classifier">
+                <h3>Fresh vs. Rotten Fruits Classifier</h3>
+                <p>A Computer Vision project using neural networks to distinguish between fresh and rotten fruits.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact reveal">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:#" class="icon"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    <footer class="footer">
+        &copy; <script>document.write(new Date().getFullYear());</script> Mohamed Taher
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".reveal");
+            const projectCards = document.querySelectorAll(".project-card");
+            
+            const revealOnScroll = () => {
+                let triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    let sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add("reveal");
+                    }
+                });
+                
+                projectCards.forEach(card => {
+                    let cardTop = card.getBoundingClientRect().top;
+                    if (cardTop < triggerBottom) {
+                        card.classList.add("reveal");
+                    }
+                });
+            };
+            
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
