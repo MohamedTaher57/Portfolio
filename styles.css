@@ -6,8 +6,14 @@ body {
     color: #e2e8f0;
     text-align: center;
     overflow-x: hidden;
+    font-size: 20px;
 }
 
+span {
+    font-weight: bold;
+    color: #0ea5e9;
+    font-size: 20px;
+}
 .header {
     background: linear-gradient(135deg, #0ea5e9, #0284c7);
     color: white;
@@ -42,6 +48,13 @@ body {
     transition: transform 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(50px);
+}
+.project-card > img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
 }
 
 .project-card img {

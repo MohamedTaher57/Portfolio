@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Taher - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -14,18 +13,18 @@
     <section class="about reveal">
         <h2>About Me</h2>
         <p>
-            Mohamed Taher<br>
+            <span>Mohamed Taher</span><br>
             AI & IoT Enthusiast | Embedded Systems | Machine Learning<br><br>
             
             I am an Intelligent Systems Engineer with a strong focus on IoT, Embedded Systems, and Machine Learning.<br>
             I aim to bridge smart technologies with real-world applications, driving innovation in intelligent systems.<br><br>
             
-            🔹 Skills & Expertise: <br>
+            <span>🔹 Skills & Expertise: <br></span>
             ✅ IoT & Embedded Systems – PCB design, microcontrollers, and smart system integration.<br>
             ✅ Machine Learning & AI – Computer Vision, Data Analysis, and Neural Networks.<br>
             ✅ Software Development – Python, C, Linux, and database management.<br>
             ✅ Graphic Design – Photoshop & Illustrator for effective technical visualization.<br><br>
-            🚀 Projects & Achievements:<br>
+            <span>🚀 Projects & Achievements:</span><br>
             Designed a custom PCB for an IoT system with high-voltage control.<br>
             Built ML-powered applications, including fruit freshness detection.<br>
             Completed NTI IoT training, covering embedded systems, security & business skills.<br>
@@ -82,34 +81,7 @@
         </div>
     </section>
     <footer class="footer">
-        &copy; <script>document.write(new Date().getFullYear());</script> Mohamed Taher
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const sections = document.querySelectorAll(".reveal");
-            const projectCards = document.querySelectorAll(".project-card");
-            
-            const revealOnScroll = () => {
-                let triggerBottom = window.innerHeight * 0.85;
-                
-                sections.forEach(section => {
-                    let sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop < triggerBottom) {
-                        section.classList.add("reveal");
-                    }
-                });
-                
-                projectCards.forEach(card => {
-                    let cardTop = card.getBoundingClientRect().top;
-                    if (cardTop < triggerBottom) {
-                        card.classList.add("reveal");
-                    }
-                });
-            };
-            
-            window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll();
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
